@@ -78,8 +78,8 @@ namespace DesafioInoa
         static async Task Main(string[] args)
         {   if (args.Length < 3)
             {
-                Console.WriteLine("Erro: Use: dotnet run -- [ATIVO] [PRECO_VENDA] [PRECO_COMPRA]");
-                Console.WriteLine("Exemplo: dotnet run -- PETR4 22.70 22.50");
+                Console.WriteLine("Erro: Use: DesafioInoa.exe [ATIVO] [PRECO_VENDA] [PRECO_COMPRA]");
+                Console.WriteLine("Exemplo: DesafioInoa.exe PETR4 22.70 22.50");
                 return;
             }
 
@@ -177,4 +177,5 @@ namespace DesafioInoa
             }
         }
     }
+
 }
