@@ -125,7 +125,7 @@ namespace DesafioInoa
                 {
                     try
                     {
-                        // 1. Faz a requisição (GET) e espera (await) a resposta
+                        // 1. Faz a requisição e espera a resposta
                         string jsonResposta = await client.GetStringAsync(url);
                         
                         Console.WriteLine(jsonResposta);
@@ -177,4 +177,5 @@ namespace DesafioInoa
             }
         }
     }
+
 }
