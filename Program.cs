@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;      
 using System.Net.Mail;
+using System.Globalization;
 
 namespace DesafioInoa
 {   public class ConfigSmtp
@@ -43,9 +44,6 @@ namespace DesafioInoa
         [JsonPropertyName("regularMarketTime")]
         public string Data { get; set; }
     }
-
-    // 2. A "CAIXA" DA RESPOSTA (O Wrapper)
-    // Como a API devolve { "results": [ ... ] }, precisamos dessa classe para "segurar" a lista
     public class RespostaApi
     {
         [JsonPropertyName("results")]
@@ -63,14 +61,12 @@ namespace DesafioInoa
             mail.To.Add(config.EmailDestino);
             mail.Subject = assunto;
             mail.Body = corpo;
-            mail.IsBodyHtml = false; // Texto simples é mais seguro para evitar spam
+            mail.IsBodyHtml = false; // Texto simples para evitar spam
 
-            // 2. Prepara o Carteiro (Cliente SMTP) 🚚
             SmtpClient smtpClient = new SmtpClient(config.Smtp.Servidor, config.Smtp.Porta);
             smtpClient.Credentials = new NetworkCredential(config.Smtp.Usuario, config.Smtp.Senha);
-            smtpClient.EnableSsl = true; // Segurança é obrigatória no Gmail
+            smtpClient.EnableSsl = true;
 
-            // 3. Envia! 🚀
             smtpClient.Send(mail);
             Console.WriteLine("--> E-mail enviado com sucesso!");
         }
@@ -86,11 +82,6 @@ namespace DesafioInoa
                 Console.WriteLine("Exemplo: DesafioInoa.exe PETR4 22.70 22.50");
                 return;
             }
-            if (args.Length == 0)
-            {
-                Console.WriteLine("Erro: Você precisa informar um ativo. Exemplo: DesafioInoa.exe PETR4");
-                return; // O return encerra o método Main imediatamente.
-            }
 
             string ticker = args[0];
             string precoMaximo = args[1];
@@ -98,6 +89,18 @@ namespace DesafioInoa
 
             decimal precoMinimoDecimal = decimal.Parse(precoMinimo, CultureInfo.InvariantCulture);
             decimal precoMaximoDecimal = decimal.Parse(precoMaximo, CultureInfo.InvariantCulture);
+
+            if (precoMinimoDecimal <= 0 || precoMaximoDecimal <= 0)
+            {
+                Console.WriteLine("Erro: Os preços devem ser valores positivos (maiores que zero).");
+                return;
+            }
+
+            if (precoMinimoDecimal >= precoMaximoDecimal)
+            {
+                Console.WriteLine("Erro: Lógica inválida. O preço de VENDA deve ser maior que o de COMPRA para você ter lucro.");
+                return;
+            }
 
             Configuracao config;
             try 
@@ -156,6 +159,14 @@ namespace DesafioInoa
                                 );
                             }
                     }
+
+                    catch (HttpRequestException httpEx)
+                    {
+                        Console.WriteLine($" Erro: O ativo '{ticker}' não foi encontrado ou a API está fora do ar.");
+                        Console.WriteLine($"Detalhe técnico: {httpEx.Message}");
+                        return;
+                    }
+
                     catch (Exception error)
                     {
                         Console.WriteLine($"Erro ao conectar: {error.Message}");
