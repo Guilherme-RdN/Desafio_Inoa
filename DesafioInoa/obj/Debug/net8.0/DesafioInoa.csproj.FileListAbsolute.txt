@@ -1,0 +1,14 @@
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\bin\Debug\net8.0\DesafioInoa.exe
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\bin\Debug\net8.0\DesafioInoa.deps.json
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\bin\Debug\net8.0\DesafioInoa.runtimeconfig.json
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\bin\Debug\net8.0\DesafioInoa.dll
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\bin\Debug\net8.0\DesafioInoa.pdb
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\DesafioInoa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\DesafioInoa.AssemblyInfoInputs.cache
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\DesafioInoa.AssemblyInfo.cs
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\DesafioInoa.csproj.CoreCompileInputs.cache
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\DesafioInoa.dll
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\refint\DesafioInoa.dll
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\DesafioInoa.pdb
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\DesafioInoa.genruntimeconfig.cache
+C:\Users\Guigu\Códigos\Inoa\DesafioInoa\obj\Debug\net8.0\ref\DesafioInoa.dll

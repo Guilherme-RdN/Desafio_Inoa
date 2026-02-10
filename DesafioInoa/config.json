@@ -1,0 +1,9 @@
+{
+  "emailDestino": "guilherme.rodrigues@ime.eb.br",
+  "smtp": {
+    "servidor": "smtp.gmail.com",
+    "porta": 587,
+    "usuario": "guilherme.desafio.inoa@gmail.com",
+    "senha": "jukl jccv eavt ixlg"
+  }
+}
