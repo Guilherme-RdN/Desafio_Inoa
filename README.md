@@ -25,4 +25,4 @@ O desenvolvimento seguiu uma estrutura cronológica de estudos:
 3.  Implementei a comunicação assíncrona com a API da Brapi.
 4.  Finalizei com o sistema de disparo de e-mails via SMTP.
 
-Todo o código foi construído e testado localmente no VS Code, garantindo o funcionamento pleno da lógica antes da publicação. A etapa final do processo consistiu no estudo de versionamento via YouTube, onde aprendi a configurar o Git e o GitHub para realizar o envio do projeto completo, consolidando todo o trabalho desenvolvido em um único commit de entrega.
+Todo o código foi construído e testado localmente no VS Code, garantindo o funcionamento pleno da lógica antes da publicação. A etapa final do processo consistiu no estudo de versionamento via YouTube, onde aprendi a configurar o Git e o GitHub para realizar o envio do projeto completo, consolidando todo o trabalho desenvolvido em praticamente um único commit de entrega.
